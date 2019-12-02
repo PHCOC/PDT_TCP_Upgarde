@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Upgrade_Tool</class>
+ <widget class="QMainWindow" name="Upgrade_Tool">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>748</width>
+    <height>637</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_5" rowminimumheight="220,0,0" columnminimumwidth="220,0,180,0,300">
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget_TCP" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <widget class="QLabel" name="label_TCP">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>53</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>TCP链接</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_IPPort">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>54</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BCMU_端口</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_IPAddr">
+       <property name="geometry">
+        <rect>
+         <x>81</x>
+         <y>40</y>
+         <width>133</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>192.168.1.100</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_IPPort">
+       <property name="geometry">
+        <rect>
+         <x>81</x>
+         <y>70</y>
+         <width>133</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>6001</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_IPAddr">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>40</y>
+         <width>66</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>BCMU_IP地址</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_TCPConnect">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>190</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>连接</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QWidget" name="widget_UART" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <widget class="QLabel" name="label_UART">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>60</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>UART链接</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_UARTConnect">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>190</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>连接</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_CheckPort">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>160</y>
+         <width>80</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>检查可用串口</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Port">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>70</y>
+         <width>61</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>COM1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM13</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM14</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>COM15</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QTextBrowser" name="textBrowser">
+       <property name="geometry">
+        <rect>
+         <x>158</x>
+         <y>40</y>
+         <width>141</width>
+         <height>111</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_StopBit">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>130</y>
+         <width>61</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_PortSelect">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>70</y>
+         <width>60</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>串口选择：</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_BoundRate">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>40</y>
+         <width>62</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>9600</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>19200</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>115200</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="comboBox_CRCBit">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>160</y>
+         <width>61</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>NONE</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>EVEN</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ODD</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>MARK</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SPACE</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_BoundRate">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>40</y>
+         <width>48</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>波特率：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Bit">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>100</y>
+         <width>48</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>数据位：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_CRCBit">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>160</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>检验位</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_StopBit">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>130</y>
+         <width>48</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>停止位：</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_Bit">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>100</y>
+         <width>61</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QWidget" name="widget_CAN" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <widget class="QLabel" name="label_CAN">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>9</y>
+         <width>53</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>CAN链接</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_CANConnect">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>190</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>连接</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_CANDevice">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>40</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>USBCAN2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>USBCAN1</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="comboBox_CANBoundRate">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>130</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>10Kbps</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>50Kbps</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>100Kbps</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>125Kbps</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>200Kbps</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>250Kbps</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>500Kbps</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1000Kbps</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_CANChannel">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>100</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>通道号</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_CANChannel">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>100</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_CANBoundRate">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>130</y>
+         <width>36</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>波特率</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_CANIndex">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>70</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_CANDevice">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>40</y>
+         <width>42</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CAN设备</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_CANIndex">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>70</y>
+         <width>60</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>设备索引号</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="5">
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="Line" name="line_5">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="5">
+     <layout class="QGridLayout" name="gridLayout_4" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" columnstretch="0,0,0,0,0,0,0,0,0,0" rowminimumheight="0,0,30,0,0,0,0,0,30,30,30,30,30,30,30">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item row="5" column="1" colspan="2">
+       <widget class="QLabel" name="label_FileVersion">
+        <property name="text">
+         <string>文件版本：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="5">
+       <widget class="QCheckBox" name="checkBox_Module5">
+        <property name="text">
+         <string>5号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="5">
+       <widget class="QCheckBox" name="checkBox_Module20">
+        <property name="text">
+         <string>20号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1" colspan="5">
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="2">
+       <widget class="QLabel" name="label_FileSize">
+        <property name="text">
+         <string>文件大小：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="2">
+       <widget class="QCheckBox" name="checkBox_Module17">
+        <property name="text">
+         <string>17号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="1">
+       <widget class="QCheckBox" name="checkBox_Module16">
+        <property name="text">
+         <string>16号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" colspan="4">
+       <widget class="QLabel" name="label_Load">
+        <property name="text">
+         <string>升级文件路径：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="3">
+       <widget class="QCheckBox" name="checkBox_Module18">
+        <property name="text">
+         <string>18号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="4">
+       <widget class="QCheckBox" name="checkBox_Module9">
+        <property name="text">
+         <string>9号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="5">
+       <widget class="QCheckBox" name="checkBox_AllUp">
+        <property name="text">
+         <string>全部升级</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="1">
+       <widget class="QPushButton" name="pushButton_StartUpgrade">
+        <property name="text">
+         <string>开始升级</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="3">
+       <widget class="QCheckBox" name="checkBox_Module3">
+        <property name="text">
+         <string>3号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="1">
+       <widget class="QCheckBox" name="checkBox_Module11">
+        <property name="text">
+         <string>11号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="5">
+       <widget class="QCheckBox" name="checkBox_SelectAll">
+        <property name="text">
+         <string>全选</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="5">
+       <widget class="QCheckBox" name="checkBox_Module10">
+        <property name="text">
+         <string>10号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="2">
+       <widget class="QCheckBox" name="checkBox_Module12">
+        <property name="text">
+         <string>12号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3" colspan="3">
+       <widget class="QLabel" name="label_FileCRC">
+        <property name="text">
+         <string>文件CRC校验：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="2">
+       <widget class="QCheckBox" name="checkBox_Module7">
+        <property name="text">
+         <string>7号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="3">
+       <widget class="QCheckBox" name="checkBox_Module13">
+        <property name="text">
+         <string>13号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="3">
+       <widget class="QCheckBox" name="checkBox_Module8">
+        <property name="text">
+         <string>8号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QComboBox" name="comboBox_SelcectZC">
+        <item>
+         <property name="text">
+          <string>主控BCMU</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>从控BMU</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="12" column="4">
+       <widget class="QCheckBox" name="checkBox_Module19">
+        <property name="text">
+         <string>19号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="4">
+       <widget class="QCheckBox" name="checkBox_Module4">
+        <property name="text">
+         <string>4号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="pushButton_OpenFile">
+        <property name="text">
+         <string>打开升级文件</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="2">
+       <widget class="QCheckBox" name="checkBox_Module2">
+        <property name="text">
+         <string>2号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="1">
+       <widget class="QCheckBox" name="checkBox_Module6">
+        <property name="text">
+         <string>6号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="5">
+       <widget class="QCheckBox" name="checkBox_Module15">
+        <property name="text">
+         <string>15号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="4">
+       <widget class="QCheckBox" name="checkBox_OneUp">
+        <property name="text">
+         <string>单机升级</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="4">
+       <widget class="QCheckBox" name="checkBox_Module14">
+        <property name="text">
+         <string>14号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QCheckBox" name="checkBox_Module1">
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>240</red>
+              <green>240</green>
+              <blue>240</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>240</red>
+              <green>240</green>
+              <blue>240</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>240</red>
+              <green>240</green>
+              <blue>240</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>1号模块</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="2" colspan="4">
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>24</number>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="9">
+       <widget class="QPushButton" name="pushButton_SaveRecord">
+        <property name="text">
+         <string>保存日志</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6" rowspan="12" colspan="4">
+       <widget class="QTextBrowser" name="textBrowser_UpgradeRecord">
+        <property name="minimumSize">
+         <size>
+          <width>318</width>
+          <height>291</height>
+         </size>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;日志：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="9">
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="9">
+       <widget class="QLabel" name="label_CommInfo">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>通讯设备信息：未打开</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCAN_Open">
+   <property name="text">
+    <string>CAN_Open</string>
+   </property>
+  </action>
+  <action name="actionUART_Open">
+   <property name="text">
+    <string>UART_Open</string>
+   </property>
+  </action>
+  <action name="actionTCP_Open">
+   <property name="text">
+    <string>TCP_Open</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
